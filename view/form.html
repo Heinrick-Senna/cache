@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Autenticação</title>
+  </head>
+  <body>
+
+    <form action="https://sistemas.api.webstore.net.br/aplicacoes/multiloja/authSave.aspx?storecode=<%= storecode %>&storekey=<%= storekey %>&channel=olist" method="post" id="formSend">
+      <textarea style="display: none" name="json" rows="8" cols="80"><%= json %></textarea>
+      <!-- <input type="submit" value="Enviar"> -->
+    </form>
+
+    <script type="text/javascript">
+      function formAutoSubmit () {
+        var frm = document.getElementById("formSend");
+        frm.submit();
+      }
+      window.onload = formAutoSubmit;
+    </script>
+  </body>
+</html>
